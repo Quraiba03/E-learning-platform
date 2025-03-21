@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Include your existing CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- Font Awesome CSS -->
+    <title>Upload Lesson</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #333333, #eeeeee);
+            color: #000000; /* Set text color to black */
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fae5df; /* Peach color background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #000000; /* Set heading color to black */
+            font-family: 'Arial Black', sans-serif; /* Stylish font */
+        }
+
+        label {
+            font-size: 24px; /* Large font size for labels */
+            color: #000000; /* Set label color to black */
+        }
+
+        input[type="text"],
+        input[type="file"],
+        textarea {
+            width: 100%;
+            padding: 15px; /* Increased padding for input fields */
+            margin-bottom: 20px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px; /* Large font size for input fields */
+            ; /* Bold font weight for input fields */
+        }
+        #heading {
+            font-size:28px;
+            font-weight: bold;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #ffffff;
+            font-size: 24px; /* Large font size for submit button */
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo"></div>
+        <ul class="menu">
+        <li >
+        <a href="../index.html" >
+        <i class="fas fa-tachometer-alt"></i>
+        <span>Dashboard</span>
+        </a>
+        </li>
+        <li class="active">
+           
+              <a href="../gsss/video_lesson/your_posts.php">
+                <i class="fas fa-listfas fa-user"></i>
+                <span>Your Posts</span>
+                </a>
+                </li>
+                <li>
+                    <a href="../profile.php">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                    </a>
+                    </li>
+                    <li>
+                       
+                            <li class="logout">
+                                <a href="../logout.php">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>logout</span>
+                                </a>
+                                </li>
+        </ul>
+    </div>
+    <div class="container">
+        
+        <h2>Upload Lesson</h2>
+        <form action="upload_lesson.php" method="post" enctype="multipart/form-data">
+            
+            <label for="heading">Heading:</label><br>
+            <input type="text" id="heading" name="heading" required><br>
+            
+            <label for="explanation">Explanation:</label><br>
+            <textarea id="explanation" name="explanation" rows="4" cols="50"></textarea><br>
+            
+            <label for="video">Upload Video:</label><br>
+            <input type="file" id="video" name="video" accept="video/*" required><br>
+            
+            <label for="keywords">Keywords (comma-separated):</label><br>
+            <input type="text" id="keywords" name="keywords"><br>
+            
+            <input type="submit" value="Upload">
+        </form>
+    </div>
+</body>
+</html>
