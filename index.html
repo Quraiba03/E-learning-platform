@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Dashboard</title>
+<link rel="stylesheet" href="style.css" />
+<link 
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+</head>
+<body>I
+<div class="sidebar">
+<div class="logo"></div>
+<ul class="menu">
+<li class="active">
+<a href="index.html" >
+<i class="fas fa-tachometer-alt"></i>
+<span>Dashboard</span>
+</a>
+</li>
+<li>
+   
+      <a href="../gsss/video_lesson/your_posts.php">
+        <i class="fas fa-listfas fa-user"></i>
+        <span>Your Posts</span>
+        </a>
+        </li>
+        <li>
+            <a href="profile.php">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+            </a>
+            </li>
+            <li>
+               
+                    <li class="logout">
+                        <a href="logout.php">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>logout</span>
+                        </a>
+                        </li>
+</ul>
+</div>
+
+<div class="main--content">
+    <div class="header--wrapper">
+      <div class="header--title">
+        <style>
+          h2 {
+            font-size: 24px;
+          }
+        </style>
+         <h2>Dashboard</h2>
+        </div>
+      <div class="user--info">
+        <div class="search--box">
+          <form action="../gsss/video_lesson/search.php" method="GET"> <!-- This form submits to search.php using GET method -->
+              <i class="fa-solid fa-search"></i>
+              <input type="text" name="query" placeholder="Search"/>
+              <button type="submit">Search</button>
+          </form>
+      </div> 
+      
+     
+        
+      </div>
+    </div>
+    <div class="image">
+        <img src="elearning.jpg" alt="Background Image">
+    </div>
+</div>        
+</body>
+</html>
